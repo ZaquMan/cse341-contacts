@@ -1,0 +1,5 @@
+GET http://localhost:3000/contacts
+# the request above returns a json object of all contacts from the MongoDB database.
+
+GET http://localhost:3000/contacts/12345
+# the request above returns a json object of the contact with the ID of 12345 from the MongoDB database.
