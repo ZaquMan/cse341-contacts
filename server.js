@@ -12,9 +12,7 @@ mongoDB.initDB((err, mongoDB) => {
 		console.log(err);
 	} else {
 		app.listen(port, () => {
-	console.log(`application is listening on port ${port} and connected to Mongo`);
-})
+			console.log(`application is listening on port ${port} and connected to Mongo`);
+		})
 	}
 })
-
-

@@ -18,11 +18,11 @@ const initDB = (callback) => {
 		})
 };
 
-const getDatbase = () => {
+const getDatabase = () => {
 	if (!database) {
 		throw Error("Database is not initialized");
 	}
 	return database;
 };
 
-module.exports = { initDB, getDatbase }
+module.exports = { initDB, getDatabase }
