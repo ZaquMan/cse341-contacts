@@ -1,0 +1,23 @@
+{
+  "name": "contacts-project",
+  "version": "1.0.0",
+  "description": "CSE341 Contact Tracking Project",
+  "homepage": "https://github.com/ZaquMan/cse341-contacts#readme",
+  "bugs": {
+    "url": "https://github.com/ZaquMan/cse341-contacts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZaquMan/cse341-contacts.git"
+  },
+  "license": "ISC",
+  "author": "Zach Barnett",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
