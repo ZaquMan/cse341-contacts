@@ -1,3 +1,4 @@
+### REST API Endpoints for Contacts
 GET http://localhost:3000/contacts
 # the request above returns a json object of all contacts from the MongoDB database.
 
