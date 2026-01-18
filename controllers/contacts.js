@@ -28,7 +28,7 @@ const getContact = async (req, res) => {
         });
 };
 
-const create = async (req, res) => {
+const createContact = async (req, res) => {
     const { firstName, lastName, email, favoriteColor, birthday } = req.body;
     const result = await mongodb.getDatabase().db().collection("contacts").insertOne({
         firstName: firstName,
@@ -37,10 +37,10 @@ const create = async (req, res) => {
         favoriteColor: favoriteColor,
         birthday: birthday
     });
-    res.status(501).send({ _id: result.insertedId });
+    res.status(200).send({ _id: result.insertedId });
 };
 
-const update = async (req, res) => {
+const updateContact = async (req, res) => {
     const id = new objectID(req.params.id);
     let docs = {};
 
@@ -66,4 +66,15 @@ const update = async (req, res) => {
     }
 };
 
-module.exports = { getAll, getContact, create, update };
+const deleteContact = async (req, res) => {
+    const id = new objectID(req.params.id);
+    const result = await mongodb.getDatabase().db().collection("contacts").deleteOne({ _id: id });
+
+    if (result.deletedCount > 0) {
+        res.status(200).send({ message: `Successfully deleted contact with _id: ${id}` });
+    } else {
+        res.status(500).send({ message: `Unable to delete contact with _id: ${id}` });
+    }
+};
+
+module.exports = { getAll, getContact, createContact, updateContact, deleteContact };
