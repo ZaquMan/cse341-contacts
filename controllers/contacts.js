@@ -45,6 +45,18 @@ const createContact = async (req, res) => {
 
 const updateContact = async (req, res) => {
     //#swagger.tags=["Contacts"]
+    //#swagger.description = "All fields are optional and should be removed if not being updated"
+    /* #swagger.parameters['body'] = {
+        in: 'body',
+        schema: {
+                firstName: 'John',
+                lastName: 'Smith',
+                email: 'john.smith@example.com',
+                favoriteColor: 'blue',
+                birthday: '01-31-1970'
+        }
+    }
+    */
     const id = new objectID(req.params.id);
     let docs = {};
 

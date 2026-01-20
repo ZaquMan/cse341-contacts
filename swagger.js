@@ -7,7 +7,7 @@ const doc = {
             "This API allows for the creation, retrieval, updating, and deletion of contacts."
     },
     host: "contacts.cse341.zaquman.com",
-    schemes: ["http", "https"]
+    schemes: ["https"]
 };
 
 const outputFile = "./swagger-output.json";
