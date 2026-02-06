@@ -11,6 +11,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", routes);
 
+/* ***********************
+* Express Error Handler
+* Place after all other middleware
+*************************/
+app.use(async (err, req, res, next) => {
+    console.error(`Error at: "${req.originalUrl}": ${err.message}`);
+    res.setHeader("Content-Type", "application/json")
+    res.status(500).send({ message: "Unable to complete." });
+})
+
 mongoDB.initDB((err /*, mongoDB*/) => {
     if (err) {
         console.log(err);

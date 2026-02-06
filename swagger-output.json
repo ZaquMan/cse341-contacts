@@ -5,10 +5,10 @@
     "description": "This API allows for the creation, retrieval, updating, and deletion of contacts.",
     "version": "1.0.0"
   },
-  "host": "contacts.cse341.zaquman.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/": {
